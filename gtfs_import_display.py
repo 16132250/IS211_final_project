@@ -89,9 +89,6 @@ def insert_trip(conn, trip):
         print(e)
 
 
-
-
-
 def get_all_routes(conn):
     cur = conn.cursor()
     cur.execute("SELECT * FROM routes")
@@ -224,7 +221,6 @@ def trips_by_headsign():
     else:
         flash("Error! Cannot create the database connection.")
         return redirect("/")
-
 
 
 if __name__ == "__main__":
