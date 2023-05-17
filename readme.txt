@@ -10,4 +10,7 @@ via a SQL join.
 
 I used Flask, BeautifulSoup, SQLite, csv, datetime, and a few html files accessed via python routes.
 
-Please give the processing a minute or two to complete.
+1. Select choose file. A current google_transit.zip file is included in the repo.
+2. Select upload. This processes the file. Please allow a minute or two to complete.
+3. Select Routes Data to see the list of routes that were processed.
+4. Select Show Trips by Route and Headsign to see how many trips were processed by headsign.
