@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Routes Data</title>
+  </head>
+  <body>
+    <h1>Routes Data</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>route_id</th>
+          <th>agency_id</th>
+          <th>route_short_name</th>
+          <th>route_long_name</th>
+          <th>route_desc</th>
+          <th>route_type</th>
+          <th>route_url</th>
+          <th>route_color</th>
+          <th>route_text_color</th>
+                    <th>imported_at</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for route in routes %}
+        <tr>
+          <td>{{ route.route_id }}</td>
+          <td>{{ route.agency_id }}</td>
+          <td>{{ route.route_short_name }}</td>
+          <td>{{ route.route_long_name }}</td>
+          <td>{{ route.route_desc }}</td>
+          <td>{{ route.route_type }}</td>
+          <td>{{ route.route_url }}</td>
+          <td>{{ route.route_color }}</td>
+          <td>{{ route.route_text_color }}</td>
+          <td>{{ route.imported_at }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
+

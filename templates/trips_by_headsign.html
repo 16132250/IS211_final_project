@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trips by Route and Headsign</title>
+</head>
+<body>
+    <h1>Trips by Route and Headsign</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Route ID</th>
+                <th>Route Short Name</th>
+                <th>Route Long Name</th>
+                <th>Trip Headsign</th>
+                <th>Trip Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in trips_data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Back to main</a>
+</body>
+</html>

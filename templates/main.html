@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Switchboard</title>
+    <script>
+      function fetchData() {
+        fetch('/routes')
+          .then(response => response.text())
+          .then(html => {
+            document.querySelector('#routesContainer').innerHTML = html;
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Routes Processed</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".zip">
+      <input type="submit" value="Upload">
+    </form>
+    <button onclick="fetchData()">Show Routes Data</button>
+    <form action="/trips_by_headsign" method="get">
+      <input type="submit" value="Show Trips by Route and Headsign">
+    </form>
+    <div id="routesContainer"></div>
+  </body>
+</html>
